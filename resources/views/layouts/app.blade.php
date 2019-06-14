@@ -34,7 +34,7 @@
         <li class="nav-item d-md-down-none">
             <a class="nav-link" href="#">
                 <i class="icon-bell"></i>
-                <span class="badge badge-pill badge-danger">5</span>
+                <span class="badge badge-pill badge-danger">0</span>
             </a>
         </li>
         <li class="nav-item dropdown">
@@ -80,12 +80,12 @@
 </div>
 <footer class="app-footer">
     <div>
-        <a href="https://infyom.com">Infyom </a>
-        <span>&copy; 2019 infyomLabs.</span>
+        <a href="{{ route('home') }}">{{ config('app.name') }} </a>
+        <span>&copy; {{ date('Y') }} </span>
     </div>
     <div class="ml-auto">
-        <span>Powered by</span>
-        <a href="https://coreui.io">CoreUI</a>
+        {{-- <span>Powered by</span>
+        <a href="https://coreui.io">CoreUI</a> --}}
     </div>
 </footer>
 </body>
