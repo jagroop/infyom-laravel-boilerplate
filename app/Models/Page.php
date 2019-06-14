@@ -65,7 +65,7 @@ class Page extends Model
      * @var array
      */
     public static $rules = [
-        
+        'title' => 'required',
     ];
 
     
