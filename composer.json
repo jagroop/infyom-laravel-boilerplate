@@ -19,7 +19,10 @@
         "infyomlabs/laravel-generator": "5.8.x-dev",
         "infyomlabs/swagger-generator": "dev-master",
         "laravelcollective/html": "^5.8.0",
-        "infyomlabs/generator-builder": "dev-master"
+        "infyomlabs/generator-builder": "dev-master",
+        "yajra/laravel-datatables-oracle": "~9.0",
+        "yajra/laravel-datatables-html": "~4.4",
+        "yajra/laravel-datatables-buttons": "~4.6"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
