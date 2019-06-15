@@ -23,3 +23,6 @@ Route::post(
 );
 
 Route::resource('pages', 'PageController');
+
+
+Route::resource('users', 'UserController');
