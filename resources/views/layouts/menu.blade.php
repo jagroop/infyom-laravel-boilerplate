@@ -16,3 +16,6 @@
 <li class="nav-item {{ Request::is('users*') ? 'active' : '' }}">
     <a class="nav-link" href="{!! route('users.index') !!}"><i class="nav-icon fa fa-users"></i><span>Users</span></a>
 </li>
+<li class="nav-item {{ Request::is('settings*') ? 'active' : '' }}">
+    <a class="nav-link" href="{!! route('settings.index') !!}"><i class="nav-icon icon-cursor"></i><span>Settings</span></a>
+</li>

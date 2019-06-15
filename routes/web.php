@@ -33,3 +33,5 @@ Route::resource('permissions', 'PermissionController');
 Route::resource('pages', 'PageController');
 
 Route::resource('users', 'UserController');
+
+Route::resource('settings', 'SettingController');
