@@ -53,6 +53,8 @@ class UserRepository extends BaseRepository
         $user = $this->model->newInstance($input);
         $user->password = bcrypt($user->password);
         $user->save();
+        $defaultRole = (string) config('boilerplate.default_role');
+        $user->assignRole($defaultRole);
         return $user;
     }
 }

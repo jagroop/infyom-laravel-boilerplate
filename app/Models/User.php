@@ -2,7 +2,10 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -17,9 +20,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string password
  * @property integer status
  */
-class User extends Model
+class User extends Authenticatable
 {
-    use SoftDeletes;
+    use Notifiable, HasRoles, SoftDeletes;
 
     public $table = 'users';
     
@@ -36,6 +39,15 @@ class User extends Model
         'status'
     ];
 
+     /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
     /**
      * The attributes that should be casted to native types.
      *
@@ -46,6 +58,7 @@ class User extends Model
         'avatar' => 'string',
         'name' => 'string',
         'email' => 'string',
+        'email_verified_at' => 'datetime',
         'password' => 'string',
         'status' => 'integer'
     ];

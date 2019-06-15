@@ -57,9 +57,9 @@
                     <i class="fa fa-user"></i> Profile</a>
                 <a class="dropdown-item" href="#">
                     <i class="fa fa-wrench"></i> Settings</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-shield"></i> Lock Account</a>
+                {{-- <div class="dropdown-divider"></div> --}}
+                {{-- <a class="dropdown-item" href="#">
+                    <i class="fa fa-shield"></i> Lock Account</a> --}}
                 <a class="dropdown-item" href="{!! url('/logout') !!}" class="btn btn-default btn-flat"
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fa fa-lock"></i>Logout

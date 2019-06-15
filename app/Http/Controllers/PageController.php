@@ -18,6 +18,7 @@ class PageController extends AppBaseController
 
     public function __construct(PageRepository $pageRepo)
     {
+        $this->middleware('permission:manage_pages');
         $this->pageRepository = $pageRepo;
     }
 
